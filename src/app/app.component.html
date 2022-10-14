@@ -1,0 +1,19 @@
+<h1>Liste de Pokémons</h1>
+<form>
+    <label for="input">Search a Pokemon : </label>
+    <input
+        #input
+        (keyup.z)="selectPokemon(input.value)"
+        id="input"
+        type="number"
+    />
+</form>
+<p *ngIf="pokemonSelected">Pokémon sélectionné : {{ pokemonSelected.name }}</p>
+<p *ngIf="!pokemonSelected">Aucun pokémon trouvé !</p>
+
+<main>
+    <div class="pokemon" *ngFor="let poke of pokemonsList">
+        <img src="{{ poke.picture }}" alt="pokemon-picture" />
+        <p>{{ poke.name }}</p>
+    </div>
+</main>
