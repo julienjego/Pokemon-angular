@@ -6,10 +6,10 @@ import { Directive, ElementRef, HostListener, Input } from "@angular/core";
 export class BorderCardDirective {
     private initialColor = "crimson";
     private defaultColor = "#009688";
-    private defaultHeight = 300;
+    // private defaultHeight = 300;
 
     constructor(private el: ElementRef) {
-        this.setHeight(this.defaultHeight);
+        // this.setHeight(this.defaultHeight);
         this.setBorder(this.initialColor);
     }
 
@@ -23,9 +23,9 @@ export class BorderCardDirective {
         this.setBorder(this.initialColor);
     }
 
-    private setHeight(height: number) {
-        this.el.nativeElement.style.height = `${height}px`;
-    }
+    // private setHeight(height: number) {
+    //     this.el.nativeElement.style.height = `${height}px`;
+    // }
 
     private setBorder(color: string) {
         this.el.nativeElement.style.border = `solid 2px ${color}`;

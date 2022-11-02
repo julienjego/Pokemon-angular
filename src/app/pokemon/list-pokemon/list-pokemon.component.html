@@ -1,0 +1,19 @@
+<main>
+    <div
+        (click)="goToPokemon(poke)"
+        class="pokemon"
+        *ngFor="let poke of pokemonsList"
+        pkmnBorderCard
+    >
+        <img src="{{ poke.picture }}" alt="pokemon-picture" />
+        <p>
+            <strong>{{ poke.name }}</strong>
+        </p>
+        <p>{{ poke.created | date: "dd MMM yyyy" }}</p>
+        <span
+            *ngFor="let type of poke.types"
+            class="{{ type | pokemonTypeColor }}"
+            >{{ type }}</span
+        >
+    </div>
+</main>

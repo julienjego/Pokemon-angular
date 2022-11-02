@@ -1,6 +1,11 @@
+<nav>
+    <div class="nav-wrapper teal">
+        <a href="#" class="brand-logo center">Pokédex</a>
+    </div>
+</nav>
 <div id="container">
-    <h1>Liste de Pokémons</h1>
-    <form>
+    <!-- <h1>Liste de Pokémons</h1> -->
+    <!--     <form>
         <label for="input">Search a Pokemon : </label>
         <input
             #input
@@ -12,14 +17,7 @@
     <p *ngIf="pokemonSelected">
         Pokémon sélectionné : {{ pokemonSelected.name }}
     </p>
-    <p *ngIf="!pokemonSelected">Aucun pokémon trouvé !</p>
+    <p *ngIf="!pokemonSelected">Aucun pokémon trouvé !</p> -->
 
-    <main>
-        <div class="pokemon" *ngFor="let poke of pokemonsList" pkmnBorderCard>
-            <img src="{{ poke.picture }}" alt="pokemon-picture" />
-            <p>
-                <strong>{{ poke.name }}</strong>
-            </p>
-        </div>
-    </main>
+    <router-outlet></router-outlet>
 </div>
